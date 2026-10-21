@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080a0f"><title>APEX F1 — Race data, clearly told</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" data-goto="overview" aria-label="APEX F1 home"><b>A</b><span>APEX <i>F1</i></span></a>
+    <button class="menu" id="menu" aria-expanded="false" aria-label="Open navigation">☰</button>
+    <nav id="nav" aria-label="Main navigation">
+      <button data-page="overview" class="active">Overview</button><button data-page="drivers">Drivers</button><button data-page="teams">Teams</button>
+      <button data-page="calendar">Race calendar</button><button data-page="live">Live timing</button><button data-page="standings">Standings</button>
+      <button data-page="analytics">Analytics</button><button data-page="circuits">Circuits</button><button data-page="compare">Compare</button><button data-page="quiz">Quiz centre</button>
+    </nav>
+    <div class="tools"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search F1" aria-label="Search drivers, teams, races or circuits"><kbd>/</kbd></label>
+      <label><span class="sr-only">Season</span><select id="season" aria-label="Season"></select></label><button id="favorites" class="icon" aria-label="Show favourite drivers">☆</button><button class="signin" id="accountButton">SIGN IN</button>
+    </div>
+  </header>
+  <main id="main"><section class="loading"><i></i> CONNECTING TO VERIFIED RACE DATA</section></main>
+  <footer><a class="brand" href="#" data-goto="overview"><b>A</b><span>APEX <i>F1</i></span></a><span>INDEPENDENT MOTORSPORT ANALYTICS · NOT AFFILIATED WITH FORMULA 1®</span><span id="sourceStatus">Waiting for data sources…</span></footer>
+  <dialog id="modal"><button id="modalClose" class="modal-close" aria-label="Close dialog">×</button><div id="modalContent"></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
